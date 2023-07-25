@@ -1,0 +1,27 @@
+<div class="containernewcharacter">
+    <p>Create a new Planets !</p>
+
+    <div class="FormCharcter">
+        <form action="" (ngSubmit)="onSubmit()">
+            <span><label for="">Name</label>
+                <input type="text" id="name" [(ngModel)]="character.name" name="name"></span>
+            <span> <label for="">Rotation_Period</label>
+                <input type="text" id="rotation_period" [(ngModel)]="character.rotation_period" name="rotation_period">
+            </span>
+            <span><label for="">Climate</label>
+                <input type="text" id="climate" [(ngModel)]="character.climate" name="climate"></span>
+            <span><label for="">Gravity</label>
+                <input type="text" id="gravity" [(ngModel)]="character.gravity" name="gravity"></span>
+            <span><label for="">Terrain</label>
+                <input type="text" id="terrain" [(ngModel)]="character.terrain" name="terrain"></span>
+
+            <button
+                *ngIf="character.name.length < 2 || character.rotation_period.length < 2 || character.climate.length < 2"
+                disabled>Create</button>
+            <button class="boton"
+                *ngIf="character.name.length > 1 && character.rotation_period.length > 1 && character.climate.length > 1">Create</button>
+        </form>
+
+
+    </div>
+</div>

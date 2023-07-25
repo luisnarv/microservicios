@@ -1,0 +1,51 @@
+<div class="containernewcharacter">
+    <br>
+    <br>
+    <br>
+    <p>Create a new Character !</p>
+
+    <div class="FormCharcter">
+        <form action="" (ngSubmit)="onSubmit()">
+
+            <span>
+                <label for="">Name</label>
+                <input type="text" id="name" [(ngModel)]="character.name" name="name">
+            </span>
+
+            <span>
+                <label for="">Height</label>
+                <input type="text" id="height" [(ngModel)]="character.height" name="height"></span>
+
+            <span>
+                <label for="">Hair_color</label>
+                <input type="text" id="hairColor" [(ngModel)]="character.hairColor" name="hairColor"></span>
+
+
+
+
+            <span>
+                <label for="">Skin_color</label>
+                <input type="text" id="skinColor" [(ngModel)]="character.skinColor" name="skinColor"></span>
+
+            <span>
+                <label for="">Birth_year</label>
+                <input type="text" id="birthYear" [(ngModel)]="character.birthYear" name="birthYear"></span>
+
+
+            <span><label for="">Gender</label>
+                <input type="text" id="gender" [(ngModel)]="character.gender" name="gender"></span>
+
+
+
+
+
+
+            <button *ngIf="character.name.length < 2 || character.hairColor.length < 2 || character.gender.length < 2"
+                disabled>Create</button>
+            <button class="boton"
+                *ngIf="character.name.length > 1 && character.hairColor.length > 1 && character.gender.length > 1">Create</button>
+        </form>
+
+
+    </div>
+</div>

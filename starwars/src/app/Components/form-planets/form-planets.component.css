@@ -1,0 +1,137 @@
+.containernewcharacter{
+    margin: 10px 0px  0px;
+       height: 100%;
+       background-color: rgb(254, 254, 254);
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   p{
+       color: rgb(0, 0, 0);
+       margin: 10px;
+       font-size: 3.5rem;
+       font-weight: bold;
+   }
+   
+   
+   .FormCharcter{
+       width: 100%;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       align-items: flex-start;
+   }
+   
+   .FormCharcter form{
+       width: 100%;
+       padding: 20px 100px 50px 200px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: flex-start;
+   }
+   
+   
+   .FormCharcter span{
+       width: 300px;
+       display: flex;
+       flex-direction: column;
+       margin: 10px;
+   }
+   
+   .FormCharcter input{
+       width: 100%;
+       margin-bottom: 10px;
+       border-style: none;
+       font-style: none;
+       outline-style: none;
+       border-radius: 0px 50px;
+       height: 30px;
+       padding: 10px;
+       background-color: rgba(4, 4, 4, 0.461);
+       color: #141414;
+   }
+   .FormCharcter label{
+       margin-bottom: 2px;
+       font-size: 1.5rem;
+       font-weight: 300;
+       color: rgb(66, 55, 55);
+   }
+   
+   .FormCharcter button{
+       font-style: none;
+       border-style: none;
+       outline: none;
+       margin-bottom: 2px;
+       font-size: 1rem;
+       font-weight: 500;
+       margin: 10px 0px 0px 70px;
+       padding: 5px;
+       border: none;
+       border-radius: 2.5px;
+     
+   }
+   
+   .boton:hover{
+      background-color: rgba(0, 0, 0, 0.41);
+   }
+
+   /* Buscador */
+.Shearch{
+    width: 90%;
+    margin: 50px;
+    display: flex;
+    justify-content:flex-end;
+  
+     & span{
+    margin: 5px 40px 5px 0px;
+    
+    } 
+  }
+  
+  .Shearch form{
+    position:static;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Shearch input{
+    height: 50px;
+    position: initial;
+    width: 350px;
+    display: flex;
+    padding: 10px;
+    font-size: 2rem;
+    font-family: sans-serif;
+    flex-direction: column;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .Shearch label{
+    position: absolute;
+    color: #0a0a09;
+    height: 20px;
+    padding: 20px 0px 0px 10px;
+    transition: all 1s ease;
+  
+  }
+  
+  .Shearch:hover{
+   & .Shearch-label{
+    padding-top: 0px;
+   
+   width:60px ;
+   color: #ffd40b;
+   }
+   
+  }
+  
+

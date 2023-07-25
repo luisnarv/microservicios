@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  gateway:
+    container_name: gateway
+    restart: always
+    build: ./gateway
+    image: public.ecr.aws/v4e1k5h5/star-wars-serve:gateway
+    ports:
+      - "8000:8000"
+
+  characters:
+    container_name: character
+    restart: always
+    build: ./characters
+    image: public.ecr.aws/v4e1k5h5/star-wars-serve:characters
+    ports:
+      - ":8001"
+
+  films:
+    container_name: films
+    restart: always
+    build: ./films
+    image: public.ecr.aws/v4e1k5h5/star-wars-serve:films
+    ports:
+      - ":8002"
+
+  planets:
+    container_name: planets
+    restart: always
+    build: ./planets
+    image: public.ecr.aws/v4e1k5h5/star-wars-serve:planets
+    ports:
+      - ":8003"
+
+  database:
+    container_name: database
+    restart: always
+    build: ./database
+    image: public.ecr.aws/v4e1k5h5/star-wars-serve:database
+    ports:
+      - ":8004"

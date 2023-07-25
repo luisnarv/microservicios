@@ -1,0 +1,62 @@
+<div class="container">
+
+  <h1>planets works!</h1>
+
+  <div class="Shearch">
+    <form>
+      <span>
+        <span>
+          <label class="Shearch-label" for="">Shearch</label>
+        </span>
+        <span>
+          <input type="text" [(ngModel)]="value" (ngModelChange)="Search()" name="search">
+        </span>
+      </span>
+    </form>
+  </div>
+
+
+  <span *ngFor="let Planet of datos" class="Cardcontenedor">
+    <ul class="Card">
+      <div class="Delete">
+        <button (click)="Delete(Planet._id)">
+          <span>Delete</span>
+        </button>
+      </div>
+      <hr style="width: 100%;">
+      <br>
+        <h2>{{Planet.name}}</h2>
+        <br>
+      <span class="list info ">
+        <li>rotation_period: {{Planet.rotation_period}}</li>
+        <li>orbital_period: {{Planet.orbital_period}}</li>
+        <li>diameter: {{Planet.diameter}}</li>
+        <li>climate: {{Planet.climate}}</li>
+        <li>gravity: {{Planet.gravity}}</li>
+        <li>terrain: {{Planet.terrain}} </li>
+        <li>surface_water: {{Planet.surface_water}} </li>
+      </span>
+      <br>
+      <h4>residents</h4>
+      <span class="residents">
+        <ul>
+          <li *ngFor="let habitante of Planet.res_idents">
+            <p>{{habitante.name}}</p>
+          </li>
+        </ul>
+      </span>
+
+      <h4>films</h4>
+      <span class="residents">
+        <ul>
+          <li *ngFor="let film of Planet.films">
+            <p>{{film.title}}</p>
+          </li>
+        </ul>
+      </span>
+
+
+    </ul>
+  </span>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="contenedor"> 
+    <!-- <div class="contenn" (click)="navigateTo('characters')" > -->
+         <router-outlet></router-outlet>
+
+<div class="container">
+    <h2>Descripción de la aplicación web con microservicios</h2>
+
+    <p>La aplicación web es una plataforma interactiva desarrollada con tecnologías modernas que permite a los usuarios explorar y gestionar información relacionada con personajes, películas y planetas del emocionante universo de Star Wars. La aplicación está basada en una arquitectura de microservicios que proporciona una estructura modular y escalable.</p>
+
+    <hr>
+
+    <section>
+      <h2>Microservicios Character, Films, Planets</h2>
+      <p>Ofrecen rutas para eliminar, crear, buscar por ID o acceder a todas las películas almacenadas en la base de datos. Están integrados con la base de datos Mongo DB Atlas para gestionar información sobre personajes, películas y planetas.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Microservicio "Database"</h2>
+      <p>Es responsable de establecer y gestionar la conexión con la base de datos Mongo DB Atlas, proporcionando una interfaz centralizada para la gestión de la base de datos. Todos estos microservicios están conectados mediante el microservicio "Gateway", que se ejecuta en el puerto 8000. Esta interfaz unificada permite que las solicitudes HTTP ingresen a través del Gateway y sean redirigidas al microservicio correspondiente (Character, Films o Planets) según la ruta especificada en la solicitud. Desde allí, el microservicio procesa la solicitud, realiza operaciones en la base de datos y devuelve la respuesta a través del Gateway.</p>
+    </section>
+    <hr>
+
+    <p>La aplicación web está diseñada con un frontend sencillo en Angular, lo que proporciona una experiencia de usuario fluida y amigable. Los usuarios pueden navegar a través de rutas dedicadas para explorar información sobre personajes, películas y planetas. También tienen la capacidad de realizar acciones como crear nuevos elementos, eliminarlos o visualizar todos los elementos en cada categoría.</p>
+
+    <hr>
+
+    <p>Para mejorar el rendimiento, la aplicación hace uso del almacenamiento local (local storage) para guardar temporalmente datos relevantes en el navegador del usuario. Esto reduce la cantidad de llamadas a la base de datos, lo que resulta en una navegación más rápida y una mejor experiencia para el usuario.</p>
+
+    <hr>
+
+    <p>En cuanto a la configuración, la aplicación utiliza Docker Compose para la gestión y despliegue de los microservicios, lo que facilita la escalabilidad y el mantenimiento. Además, todo el sistema se ejecuta en un servidor de Amazon AWS, lo que garantiza una alta disponibilidad y un rendimiento óptimo.</p>
+
+    <hr>
+
+    <p>El backend de la aplicación está construido en Node.js y utiliza diversas tecnologías como CORS, Express, HTTP, Proxi Middleware, Axios y Morgan para facilitar la gestión de las solicitudes HTTP y la interacción entre los microservicios y la base de datos Mongo DB Atlas.</p>
+  </div>
+
+
+</div>

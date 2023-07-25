@@ -1,0 +1,84 @@
+* {
+    font-style: italic;
+    font-weight: 900;
+}
+#linea{
+    color: white;
+    background-color: #ec8812;
+    width: 100%;
+    border: solid 1px #5f5c5c;
+  }
+  
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    align-items: center;
+}
+
+.navbar img {
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    height: 100px;
+    filter: opacity(0.5);
+    cursor: pointer;
+}
+
+.navbar img:hover {
+    filter: brightness(5);
+}
+
+.contenedor {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonList {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    & a {
+        text-decoration: none;
+        text-decoration-line: none;
+        text-decoration-color: none;
+        color: rgb(255, 255, 255);
+    }
+
+    & button {
+        width: 80%;
+        padding: 1px;
+        margin: 5px;
+        border-radius: 5px;
+        border-style: none;
+        outline-style: none;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 0.5s ease;
+
+    }
+
+    & button:hover {
+        background-color: rgba(237, 237, 237, 0.182);
+        box-shadow: 0px 0px 5px 1.5px rgb(0, 0, 0);
+
+        & a {
+            color: rgb(220, 246, 18);
+        }
+    }
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+}

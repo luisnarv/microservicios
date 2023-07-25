@@ -1,0 +1,58 @@
+<div>
+  <p>films works!</p>
+
+  <div class="container">
+
+    <div class="Shearch">
+      <form>
+        <span>
+          <span>
+            <label class="Shearch-label" for="">Shearch</label>
+          </span>
+          <span>
+            <input type="text" [(ngModel)]="value" (ngModelChange)="Search()" name="search">
+          </span>
+        </span>
+
+      </form>
+    </div>
+
+    <ul class="Card" *ngFor="let films of datos">
+      <span class="DeleteButton">
+        <button (click)="Delete(films._id)"><span><img src="../../../assets/Image/delete.png" alt=""> Delete</span></button>
+      </span>
+       
+      <li class="list">
+        <h2>{{films.title}}</h2>
+
+       
+      </li>
+      <li class="list"><span>{{films.opening_crawl}}</span> </li>
+      <span class="cardContainer list">
+        <li><span>
+            <h4>Director</h4>
+            <p>{{films.director}}</p>
+          </span>
+        </li>
+        <li><span>
+            <h4>producer</h4>
+            <p>{{films.producer}}</p>
+          </span>
+        </li>
+        <li>{{films.release_date}}</li>
+      </span>
+
+      <h3>Characters</h3>
+      <span class="cardContainer">
+        <ul>
+          <li *ngFor="let character of films.characters">
+            <p>{{ character.name }}</p>
+          </li>
+        </ul>
+      </span>
+      <br>
+      <hr id="linea">
+    </ul>
+  </div>
+
+</div>

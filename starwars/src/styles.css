@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+   padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../src/assets/Image/space-1164579_1280.png);
+}

@@ -1,0 +1,29 @@
+<div class="containernewcharacter">
+    <p>Create a new Films !</p>
+
+    <div class="FormCharcter">
+        <form action="" (ngSubmit)="onSubmit()">
+
+
+            <span>     <label for="">Tilte</label>
+            <input type="text" [(ngModel)]="character.title" name="title"></span>
+            <span> <label for="">Opening_Crawl</label>
+            <input type="text" id="openingCrawl" [(ngModel)]="character.openingCrawl" name="openingCrawl"></span>
+            <span><label for="">Director</label>
+            <input type="text" id="director" [(ngModel)]="character.director" name="director"></span>
+            <span><label for="">Producer</label>
+            <input type="text" id="producer" [(ngModel)]="character.producer" name="producer"></span>
+            <span> <label for="">Release_Date</label>
+            <input type="text" id="releaseDate" [(ngModel)]="character.releaseDate" name="releaseDate"></span>
+
+            <button
+                *ngIf="character.title.length < 2 || character.openingCrawl.length < 2 || character.director.length < 2"
+                disabled>Create</button>
+            <button class="boton"
+                *ngIf="character.title.length > 1 && character.openingCrawl.length > 1 && character.director.length > 1">Create</button>
+
+        </form>
+
+
+    </div>
+</div>

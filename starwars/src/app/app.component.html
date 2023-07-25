@@ -1,0 +1,38 @@
+
+<div class="navbar">
+    <a  routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" >
+       <img src="../assets/STAR-WARS-logo.png" alt="Logo.png">    
+    </a>
+
+    <div class="contenedor">
+        <div class="buttonList">
+             <button class="buttonCharacter" >
+                <a  routerLink="/characters" routerLinkActive="active" ariaCurrentWhenActive="page">Characters</a></button>
+             <button class="buttonCreateCharacter" >
+                <a  routerLink="/neWcharacter" routerLinkActive="active" ariaCurrentWhenActive="page">CreateCharacters</a></button>
+        
+             <button class="buttonFilm" >
+                <a  routerLink="/films" routerLinkActive="active" ariaCurrentWhenActive="page">Films</a></button>
+             <button class="buttonCreateFilm" >
+                <a  routerLink="/neWfilm" routerLinkActive="active" ariaCurrentWhenActive="page">CreateFilms</a> </button>
+
+             <button class="buttonPlanet" >
+                <a  routerLink="/planet" routerLinkActive="active" ariaCurrentWhenActive="page">Planets</a></button>
+             <button class="buttonCreatePlanet" >
+                <a  routerLink="/neWplanet" routerLinkActive="active" ariaCurrentWhenActive="page">CreatePlanets</a></button>
+         </div>
+         </div>
+ 
+</div>
+
+<div class="contacto">
+   <a href="https://linkedin.com/in/luis-narvaez-" target="_blank" ><img src="../assets/Image/linkdIn.png" width="150px" height="40px" alt="link-logo" /></a>
+   <a href="https://github.com/luisnarv/microservicios.git" target="_blank" >    <img src="../assets/Image/pngimg.com - github_PNG15.png" width="200px" style="filter: invert();" alt="link-logo" /></a>
+    
+
+</div>
+
+ <br>
+<hr id="linea">
+
+   <router-outlet></router-outlet>

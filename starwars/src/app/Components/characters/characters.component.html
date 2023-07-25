@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>characters works!</h1>
+
+    <div class="Shearch">
+        <form>
+            <span>
+                <span>
+                    <label class="Shearch-label" for="">Shearch</label>
+                </span>
+                <span>
+                    <input type="text" [(ngModel)]="value" (ngModelChange)="Search()" name="search">
+                </span>
+            </span>
+
+        </form>
+    </div>
+
+
+    <div class="ContainerCard">
+        <div class="nextPage">
+             <button class="buttonLEft" (click)="changueCardRight()">{{this.flecha2}}</button>
+            <button class="buttonRight" (click)="changueCardLeft()">{{this.flecha}}
+            </button>
+        </div>
+
+
+        <span class="ContainerCard01" *ngFor="let character of datos.slice(this.left, this.rigth)">
+
+            <ul class="card">
+
+                <h2>{{character.name}} </h2>
+
+                <i style="width: 100px;" className="bi bi-list"></i>
+                <span class="label">
+                    <span>Height: {{character.height}} </span>
+                    <span>Mass: {{character.mass}}</span>
+                    <span>Hair color: {{character.hair_color}}</span>
+                    <span>Skin color: {{character.skin_color}}</span>
+                    <span>eye color: {{character.eye_color}}</span>
+                    <span>birth_year: {{character.birth_year}}</span>
+                    <span>gender: {{character.gender}}</span>
+                </span>
+                <span class="label2">
+                    <h4>Planet_Home</h4>
+                    <p *ngIf="character.homeworld">{{character.homeworld.name}} </p>
+                    <h4>Films</h4>
+                    <ul *ngFor="let film of character.films">
+                        <p>{{film.title}}</p>
+                    </ul>
+                </span>
+                <br>
+            </ul>
+            <hr style="width: 100%;">
+            <div class="Delete"><button (click)="Delete(character._id)"><span>Delete</span></button></div>
+
+        </span>
+
+
+
+    </div>
